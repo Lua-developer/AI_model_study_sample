@@ -38,7 +38,7 @@ base_dir = './datasets/cats_and_dogs_small'
 train_dir = os.path.join(base_dir, 'train')
 validation_dir = os.path.join(base_dir, 'validation')
 test_dir = os.path.join(base_dir, 'test')
-# 이미지 데이터 전처리 함수
+# 적은 데이터를 사용하므로 학습 전 데이터 증식
 datagen = ImageDataGenerator(rescale=1./255)
 batch_size = 20
 # 특성 추출
