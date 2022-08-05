@@ -14,7 +14,9 @@ batch size = 32, epoch = 25
 모델 레퍼런스 : https://www.kaggle.com/code/khoongweihao/covid-19-ct-scan-xray-cnn-detector  
 
 최종 학습 결과(epoch 25) : train_accuracy = 96%, val_accuracy = 74%  
-![image](https://user-images.githubusercontent.com/83262616/183012493-081f965e-bb3e-4c03-a639-9eb8a0c0d953.png)
+![image](https://user-images.githubusercontent.com/83262616/183012493-081f965e-bb3e-4c03-a639-9eb8a0c0d953.png)  
+시각화  
+![image](https://user-images.githubusercontent.com/83262616/183048198-32dcd1da-a2ca-4f7f-a1d7-a103f3a7fed0.png)
 이미지 데이터셋 전처리 과정 : keras.preprocessing.image의 ImageDataGenerator 사용  
 
 1차 학습 리뷰  
