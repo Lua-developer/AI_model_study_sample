@@ -41,3 +41,16 @@ epoch을 25->15로 줄임
 기존 데이터셋에서 test용 데이터와 validation 데이터의 개수가 약 800개, 16개로 test 데이터를 검증용으로, validation 데이터를 모델 평가용으로 사용함  
 ![image](https://user-images.githubusercontent.com/83262616/183053110-051aa138-9eb2-4bc6-97c1-29fa0a2611f9.png)  
 2차 학습의 모델 평가 결과 75%의 정확도를 보였음.
+## 3차 학습 리뷰  
+### 2차 학습에서 변경 점  
+2차 학습 역시 일반화 성능에서 unstable한 학습 과정을 보였음. 이를 해결하기 위해 찾아본 결과 오버피팅도 아닌 일반화 성능의 그래프가 불안정한 경우는 배치사이즈 및 모델의 복잡도 줄이기, 학습율 조정 등이 있었다.(힌트를 얻은 링크 : https://forums.fast.ai/t/very-volatile-validation-loss/7573/9)  
+가장 먼저 배치사이즈의 크기를 늘렸을때 이전 학습때에서의 불안정 문제가 해결 되었으며,   
+검증과정에서의 일반화 성능 정확도가 6epoch을 기준으로 86.7%까지 향상된 것을 볼 수 있었다.  
+CPU 가속모드의 사용으로, 학습 결과가 느리게 도출됨을 감안하여 epoch을 줄여 테스트하였고, 9epoch을 기준으로는 7epoch 부터 overfitting이 보이는 것을 확인함.  
+더 정확한 모델의 정확도를 따져보려면 더 많은 epoch, 배치사이즈 조절이 필요 할 것 같음.  
+최종 모델 학습 결과
+![image](https://user-images.githubusercontent.com/83262616/183106376-d9cc2a63-c130-4e90-b000-36489a85759c.png)  
+모델 시각화 결과  
+![image](https://user-images.githubusercontent.com/83262616/183106525-33378018-10e4-437a-b550-2cfa2c16b3be.png)  
+3차 학습의 모델 평가 결과 81%의 정확도를 보였음.  
+![image](https://user-images.githubusercontent.com/83262616/183106634-f64e662d-c7b0-42bb-9e84-37a1394e07d4.png)
